@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Todo List</title>
+</head>
+
+<body>
+    <button onclick="createEl()">Add</button>
+    
+    <script>
+        let ctr = 1; 
+        function createEl(){
+            const parent = document.querySelector('body'); 
+
+            const div_el = document.createElement('div');
+            div_el.setAttribute('id', ctr);
+
+            const under_div_el = document.createElement('h4');
+            under_div_el.textContent = 'new list'; // or we  can use innerHTML='newlist'
+
+            div_el.appendChild(under_div_el);
+            parent.appendChild(div_el); 
+
+            ctr++; 
+        }
+    </script>
+</body>
+</html>

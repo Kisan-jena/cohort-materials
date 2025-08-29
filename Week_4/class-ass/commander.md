@@ -1,0 +1,8 @@
+![alt text](/Week_4/image/image-1.png)
+![alt text](/Week_4/image/image-2.png)
+![alt text](/Week_4/image/image-3.png)
+![alt text](/Week_4/image/image-4.png)
+![alt text](/Week_4/image/image-5.png)
+![alt text](/Week_4/image/image-6.png)
+![alt text](/Week_4/image/image-7.png)
+![alt text](/Week_4/image/image-8.png)

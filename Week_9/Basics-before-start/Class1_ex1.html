@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Changecounter(){
+            const currentValue=document.getElementById("btn").innerHTML; // if it is Counter 0
+            const currentCounter=currentValue.split(" ")[1]; // it wil convert it into ["Counter","0"]
+            const newCounter=parseInt(currentCounter)+1; //i will make 0 --> 1
+            document.getElementById("btn").innerHTML="Counter "+newCounter; // This will make it 1
+                }
+    </script>
+    <button onclick="Changecounter()" id="btn" >Counter 0</button>
+</body>
+</html>

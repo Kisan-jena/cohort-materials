@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Todo List</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <input type="text" placeholder="Enter a todo item"></input>
+  <button onclick="addTodo()">Add Todo!</button>
+  <button onclick="deleteLastTodo()">Delete Last Todo</button>
+  <button onclick="deleteFirstTodo()">Delete First Todo</button>
+  <div id="root"></div>
+
+  <script>
+    let todos = [];
+
+    // Function to add a todo
+    function addTodo() {
+      const input = document.querySelector("input");
+      const title = input.value.trim();
+      if (title === "") return alert("Please enter a todo item!");
+
+      const id = Date.now(); // Unique ID based on timestamp
+      todos.push({ id, title });
+      input.value = ""; // Clear input field
+      render();
+    }
+
+    // Function to delete the last todo
+    function deleteLastTodo() {
+      todos.splice(todos.length - 1, 1); // Remove the last element
+      render();
+    }
+
+    // Function to delete the first todo
+    function deleteFirstTodo() {
+      todos.splice(0, 1); // Remove the first element
+      render();
+    }
+
+    // Function to delete a specific todo
+    function deleteTodo(id) {
+      todos = todos.filter(todo => todo.id !== id); // Remove the todo with the matching ID
+      render();
+    }
+
+    // Function to create a todo component
+    function createTodoComponent(todo) {
+      const div = document.createElement("div");
+      div.id = `todo-${todo.id}`;
+      div.className = "todo-item";
+
+      const h1 = document.createElement("h1");
+      h1.textContent = todo.title;
+
+      const button = document.createElement("button");
+      button.textContent = "-";
+      button.onclick = () => deleteTodo(todo.id);
+
+      div.append(h1, button);
+      return div;
+    }
+
+    // Function to render todos
+    function render() {
+      const root = document.querySelector("#root");
+      root.innerHTML = ""; // Clear the container
+      todos.forEach(todo => {
+        const element = createTodoComponent(todo);
+        root.appendChild(element);
+      });
+    }
+  </script>
+</body>
+
+</html>

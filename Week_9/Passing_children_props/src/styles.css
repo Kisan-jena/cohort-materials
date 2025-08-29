@@ -1,0 +1,42 @@
+/* styles.css */
+
+.navbar {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .footer {
+    background-color: #f1f1f1;
+    color: #555;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="buttonParent"></div>
+
+<script>
+        // same as react sate initiallisation
+        let state = {
+          count: 0,
+          color: "red"
+        };
+
+        //  same as react button component
+        function onButtonPress() {
+          state.count = state.count + 1;
+          state.color = Math.random() > 0.5 ? "red" : "yellow";
+          buttonComponentReRender();
+        }
+
+        // done by react not need to write this code in react
+        function buttonComponentReRender() {
+          document.getElementById("buttonParent").innerHTML = "";
+          const component = buttonComponent(state.count, state.color);
+          document.getElementById("buttonParent").appendChild(component);
+        }
+
+        //  same as react button component
+        function buttonComponent(count, color) {
+          const button = document.createElement("button");
+          button.innerHTML = "Counter " + count;
+          button.setAttribute("onclick", `onButtonPress()`);
+          button.setAttribute("style", `color: ${color}`);
+        return button;
+        }
+
+        buttonComponentReRender();
+
+</script>
+</body>
+</html>

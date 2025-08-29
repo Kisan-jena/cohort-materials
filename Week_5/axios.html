@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js"></script>
+</head>
+
+<body>
+  <button onclick="fetchPosts()">Fetch Post</button>
+  <div id="posts"> HERE IT WILL FETCH </div>
+
+  <script>
+    async function fetchPosts() {
+      try {
+        const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1");
+        document.getElementById("posts").innerHTML = JSON.stringify(res.data, null, 2);
+      } catch (error) {
+        document.getElementById("posts").innerHTML = "Error fetching post!";
+      }
+    }
+  </script>
+</body>
+
+</html>

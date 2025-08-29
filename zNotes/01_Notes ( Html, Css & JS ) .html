@@ -1,0 +1,534 @@
+<!DOCTYPE html><html><head>
+      <title>01_Notes ( Html, Css &amp; JS ) </title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Welcome\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h2 id="html-tags--some-imp-tags"><code>HTML TAGS ( some imp tags) </code> </h2>
+<ul>
+<li>html</li>
+<li>head</li>
+<li>title</li>
+<li>body</li>
+<li>div ( takes all space horizontally )</li>
+<li>span( takes space horizontally as nedded )</li>
+<li>h1....h6</li>
+<li>p</li>
+<li>img</li>
+<li>a</li>
+<li>input</li>
+<li>button</li>
+<li>b / i</li>
+<li>centre</li>
+<li>br</li>
+</ul>
+<h4 id="task--google-about-hrml4html5-and-htmx">Task : google about hrml4,html5 and Htmx </h4>
+<h5 id="attributes">Attributes </h5>
+<ul>
+<li><img src="1.png" alt="alt text"></li>
+</ul>
+<h2 id="css"><code>CSS</code> </h2>
+<h5 id="1-basics">1. BASICS </h5>
+<ul>
+<li>Some basics Css, background,shadow,border,font-size,border-radius</li>
+<li>Code :-<br>
+<img src="image.png" alt="alt text"></li>
+<li>Output :- <img src="image-1.png" alt="alt text"></li>
+</ul>
+<h5 id="note--use-inspect-for-try-and-error">NOTE : Use Inspect for try and error </h5>
+<ul>
+<li><img src="image-2.png" alt="alt text"></li>
+</ul>
+<h5 id="remove-and-back-to-normal-after-reloading-pages">Remove and back to normal after reloading pages!!!!!!!!!!! </h5>
+<ul>
+<li><img src="image-3.png" alt="alt text"></li>
+</ul>
+<h5 id="2-some-important-things-to-know">2. some Important things to know. </h5>
+<ul>
+<li>Use flex box concept with div to postioning the element.</li>
+<li>Dont use float and absoulte postioning.</li>
+<li>Padding use indside Div to postioning components inside div.</li>
+<li>Margin use out side a div to postioning components inside div and to postioning Div also.</li>
+</ul>
+<h2 id="java-script"><code>JAVA SCRIPT</code> </h2>
+<h3 id="week-1"><code>WEEK 1</code> </h3>
+<h3 id="1-basics-1"><code>1.</code> <code>BASICS </code> </h3>
+<ul>
+<li>CONTENT
+<ul>
+<li>1.1 Why language?</li>
+<li>1.2 Interpreted vs compiled languages</li>
+<li>1.3 Why JS &gt;&gt; Other languages in some use-cases</li>
+<li>1.4 Strict vs dynamic languages</li>
+<li>1.5 Single threaded nature of JS</li>
+<li>1.6 Simple primitives in JS (number, strings, booleans)</li>
+<li>1.7 Complex primitives in JS (arrays, objects)</li>
+<li>1.8 Functions in Javascript</li>
+<li>1.9 Callback functions, Event loop, callback queue, Asynchronous programming</li>
+</ul>
+</li>
+</ul>
+<h4 id="11-why-language"><code>1.1</code> WHY Language?? </h4>
+<ul>
+<li>languages help to write an application , where as human communicate human with machine by the help of Interpreter and compiler , bcoz machine cant understand high level languages.</li>
+</ul>
+<h4 id="12-interpreted-vs-compiled-languages"><code>1.2</code> Interpreted vs compiled languages </h4>
+<ul>
+<li>
+<p>Compiler</p>
+<ul>
+<li>Compiler firest need to compile whole thingh, then need to run</li>
+<li>Stop if there is any error in between</li>
+<li>Ex:- C++,java,rust,golang</li>
+</ul>
+</li>
+<li>
+<p>Interpreter</p>
+<ul>
+<li>Go line by line</li>
+<li>Can run partially if there is an error</li>
+<li>Ex: js, py</li>
+</ul>
+</li>
+</ul>
+<h4 id="14-strict-vs-dynamic-languages"><code>1.4</code> Strict vs dynamic languages </h4>
+<ul>
+<li>In strict lang u have to mention datatype and in dynamics it will recoginize it automatically.<img src="image-5.png" alt="alt text"></li>
+</ul>
+<h4 id="15-single-threaded-nature-of-js"><code>1.5</code> Single threaded nature of JS </h4>
+<ul>
+<li>Interpreter language are mostly slow bcoz of single core or single thread.<img src="image-6.png" alt="alt text"></li>
+</ul>
+<h4 id="note-"><code>NOTE :</code> </h4>
+<ul>
+<li>We can make a array of objects also <img src="image-7.png" alt="alt text"></li>
+</ul>
+<h4 id="18-functions"><code>1.8</code> Functions </h4>
+<ul>
+<li>
+<p>Abstract out logic in your program</p>
+</li>
+<li>
+<p>Take arguments as an input</p>
+</li>
+<li>
+<p>Return a value as an output</p>
+</li>
+<li>
+<p>You can think of them as an independent program that is supposed to do something given an input</p>
+</li>
+<li>
+<p>Functions can take other functions as input or function used as parameter or function passed as argumnmet to other function (<code>callbacks :</code> used in asynch funcion)</p>
+</li>
+<li>
+<p>Normally</p>
+<ul>
+<li>Input code:<br>
+<img src="image-8.png" alt="alt text"></li>
+<li>Output :<br>
+<img src="image-13.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p>Without callbacks</p>
+<ul>
+<li>Input code:<br>
+<img src="image-9.png" alt="alt text"></li>
+<li>Output:<br>
+<img src="image-14.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p>With Callbacks</p>
+<ul>
+<li>Input code:<br>
+<img src="image-10.png" alt="alt text"></li>
+<li>Output:<br>
+<img src="image-11.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p>CALLBACK IS USED IN REAL TIME PROJECT</p>
+<ul>
+<li>One example is the setTimeout , output after 5 sec appears<br>
+<img src="image-15.png" alt="alt text"></li>
+</ul>
+</li>
+</ul>
+<h4 id="19-callback-functions-real-used-in-asynch-funcion--js-arch-event-loopcallback-queue-asynchronous-programming"><code>1.9</code> Callback functions real used in asynch funcion , JS arch (Event loop,Callback queue) Asynchronous programming </h4>
+<h5 id="synchronous-programmming">Synchronous programmming </h5>
+<ul>
+<li>In sequence step by step</li>
+</ul>
+<h5 id="asynchronous-programmming">ASynchronous programmming </h5>
+<ul>
+<li>Context switching in between the process or doing parallely the given process</li>
+</ul>
+<h5 id="for-ex-there-is-a-process-of-froming-maggi"><code>For Ex:</code> There is a process of froming maggi </h5>
+<ul>
+<li>So the time taken for <code>(Synchronous)</code>  5 min for water boling + 5 min chopeing veges + 5 min to purchase sauce from market + 5 min maggi preperation.</li>
+<li>Total time by synchronously is 20 mins</li>
+<li>And for the <code>(Asynchronous)</code> 5 min for water boiling,chopeing veges + 5 min maggi preperation</li>
+<li>Total time by Asynchronously is 10 mins</li>
+</ul>
+<h5 id="how-does-js-do-the-same-can-js-delegate-can-js-context-switch">How does JS do the same? Can js delegate? can Js context switch </h5>
+<ul>
+<li>
+<p>ASynch example in which setTimeout is asynch function define by js only</p>
+</li>
+<li>
+<p><code>Examples:</code></p>
+</li>
+<li>
+<p><code>1.</code><br>
+<img src="image-64.png" alt="alt text"><br>
+<img src="image-66.png" alt="alt text"></p>
+</li>
+<li>
+<p><code>2.</code><br>
+<img src="image-70.png" alt="alt text"><br>
+<img src="image-69.png" alt="alt text"></p>
+</li>
+<li>
+<p><code>3.</code> In below example we see that output of a.txt is showing after a "hi there 2" even though reading file is complete the main thread is busy some where else .<br>
+<img src="image-71.png" alt="alt text"><br>
+<img src="image-72.png" alt="alt text"></p>
+</li>
+<li>
+<p>Synchronus example<br>
+<img src="image-65.png" alt="alt text"><br>
+<img src="image-67.png" alt="alt text"></p>
+</li>
+</ul>
+<h5 id="visualize-how-asynch-nature-is-working-by-wisting-this-link-httplatentflipcomloupe">Visualize how asynch nature is working by wisting this link <a href="http://latentflip.com/loupe/">http://latentflip.com/loupe/</a> </h5>
+<h4 id="110--promises"><code>1.10</code>  Promises </h4>
+<ul>
+<li>Promises are syntactical sugar that make callback function more readable<br>
+<img src="image-79.png" alt="alt text"><br>
+<img src="image-80.png" alt="alt text"></li>
+<li>Promises are a way to handle asynchronous operations. They represent a value that may be available now, in the future, or never. A Promise allows you to work with async code without falling into <code>"callback hell"</code> making the code more readable and manageable.</li>
+</ul>
+<p><code>Examples:</code></p>
+<ul>
+<li>
+<p>Simple code without promises<br>
+<img src="image-73.png" alt="alt text"><br>
+<img src="image-74.png" alt="alt text"></p>
+</li>
+<li>
+<p>It is just a wrapper on top of another async function, which is fine. Usually, all async functions you will write will be on top of JS provided async functions like <code>setTimeout</code> or <code>fs.readFile</code><br>
+<img src="image-75.png" alt="alt text"><br>
+<img src="image-76.png" alt="alt text"></p>
+</li>
+<li>
+<p>Proper way  or cleaner way to write an asynch code<br>
+<img src="image-77.png" alt="alt text"><br>
+<img src="image-78.png" alt="alt text"></p>
+</li>
+</ul>
+<h4 id="note--1"><code>NOTE :</code> </h4>
+<ul>
+<li>Both give same result<br>
+<img src="image-81.png" alt="alt text"></li>
+<li>same as above code<br>
+<img src="image-82.png" alt="alt text"></li>
+</ul>
+<h4 id="note--2"><code>NOTE :</code> </h4>
+<ul>
+<li>CODE : In this console.log(ab) is having return value from displayresult i.e return "Result  is : " + data, so in this output is give n by console.log(ab)<br>
+<img src="image-16.png" alt="alt text"><br>
+Ouput :<br>
+<img src="image-17.png" alt="alt text"></li>
+<li>CODE : In this the console.log(ab) is not having anything in return value from displayresult which is the last callabck function , and the output value is doing by function not by console.log(ab)<br>
+<img src="image-18.png" alt="alt text"><br>
+Output :<br>
+<img src="image-19.png" alt="alt text"></li>
+</ul>
+<h3 id="2-some-usefull-built-in-methods"><code>2.</code> <code>SOME USEFULL BUILT-IN METHODS </code> </h3>
+<ul>
+<li>CONTENT :
+<ul>
+<li>2.1 STRING</li>
+<li>2.2 NUMBERS</li>
+<li>2.3 ARRAYS</li>
+</ul>
+</li>
+</ul>
+<h4 id="21-string-"><code>2.1</code> <code>String :</code> </h4>
+<ul>
+<li>string.length<br>
+<img src="image-20.png" alt="alt text"><img src="image-21.png" alt="alt text"></li>
+<li>string.indexOf( )<br>
+<img src="image-22.png" alt="alt text"><img src="image-23.png" alt="alt text"></li>
+<li>string.lastIndexOf( )<br>
+<img src="image-24.png" alt="alt text"><img src="image-25.png" alt="alt text"></li>
+<li>string.slice( )<br>
+<img src="image-26.png" alt="alt text"><img src="image-27.png" alt="alt text"></li>
+<li>string.substring( )<br>
+<img src="image-28.png" alt="alt text"><img src="image-29.png" alt="alt text"></li>
+<li>string.substr( )<br>
+<img src="image-30.png" alt="alt text"><img src="image-31.png" alt="alt text"></li>
+<li>string.replace( )<br>
+<img src="image-32.png" alt="alt text"><img src="image-33.png" alt="alt text"></li>
+<li>string.split( )<br>
+<img src="image-34.png" alt="alt text"><img src="image-35.png" alt="alt text"></li>
+<li>string.trim( )<br>
+<img src="image-36.png" alt="alt text"><img src="image-37.png" alt="alt text"></li>
+<li>string.toUpperCase( )<br>
+<img src="image-38.png" alt="alt text"><img src="image-40.png" alt="alt text"></li>
+<li>string.toLowerCase( )<br>
+<img src="image-39.png" alt="alt text"><img src="image-41.png" alt="alt text"></li>
+</ul>
+<h4 id="22-numbers-"><code>2.2</code> <code>Numbers :</code> </h4>
+<ul>
+<li>ParseInt<br>
+<img src="image-42.png" alt="alt text"><img src="image-43.png" alt="alt text"></li>
+<li>ParseFloat<br>
+<img src="image-44.png" alt="alt text"><img src="image-45.png" alt="alt text"></li>
+</ul>
+<h4 id="23-arrays-"><code>2.3</code> <code>Arrays :</code> </h4>
+<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>splice()</li>
+<li>slice()</li>
+<li>concat()</li>
+<li>forEach()</li>
+<li>map()</li>
+<li>filter()</li>
+<li>reduce()</li>
+<li>find()</li>
+<li>sort()</li>
+</ul>
+<h3 id="3-classes"><code>3.</code> <code>CLASSES</code> </h3>
+<ul>
+<li>Input : In this we use normal methods which we can call with objetc only<br>
+<img src="image-46.png" alt="alt text"></li>
+<li>Output :<br>
+<img src="image-47.png" alt="alt text"></li>
+</ul>
+<h4 id="note--3"><code>NOTE :</code> </h4>
+<ul>
+<li>Input :<img src="image-48.png" alt="alt text"></li>
+<li>Output :<img src="image-49.png" alt="alt text"></li>
+</ul>
+<h3 id="4-dates"><code>4.</code> <code>DATES</code> </h3>
+<ul>
+<li>
+<p>Input :<br>
+<img src="image-52.png" alt="alt text"></p>
+</li>
+<li>
+<p>Output:<br>
+<img src="image-51.png" alt="alt text"></p>
+</li>
+<li>
+<p><code>Use Case :</code><br>
+<img src="image-53.png" alt="alt text"><br>
+<img src="image-54.png" alt="alt text"></p>
+</li>
+</ul>
+<h3 id="5-json"><code>5.</code> <code>JSON </code> </h3>
+<ul>
+<li>In this a JSON  string is converted into a json object by using <code>JSON.parse</code> and again converted into json string by using <code>JSON.stringify</code><br>
+<img src="image-55.png" alt="alt text"><br>
+<img src="image-56.png" alt="alt text"></li>
+<li>EXAMPLE1 :<br>
+<img src="image-57.png" alt="alt text"><br>
+<img src="image-58.png" alt="alt text"></li>
+</ul>
+<h4 id="note--difference-bw-json-and-js-object"><code>NOTE : Difference b/w JSON and JS Object</code> </h4>
+<ul>
+<li>
+<p><code>1.</code> JSON (JavaScript Object Notation):</p>
+<ul>
+<li>JSON is a data format used to represent structured data as text.</li>
+<li>It is strictly a string and can only store data, not functions or variables.</li>
+<li>JSON keys and values must follow certain rules: keys are always strings (enclosed in double quotes), and values must be strings, numbers, booleans, arrays, or objects.</li>
+<li>It is used for data exchange between systems, often in APIs and file storage.<br>
+<img src="image-60.png" alt="alt text"><br>
+<img src="image-61.png" alt="alt text"></li>
+</ul>
+</li>
+<li>
+<p><code>2.</code> JavaScript Object (JS Object):</p>
+<ul>
+<li>A JavaScript object is a data structure in JavaScript that stores data in key-value pair</li>
+<li>It can contain various data types (strings, numbers, booleans, arrays, functions, other objects).</li>
+<li>The syntax allows you to use variables, functions, and more complex data types.</li>
+<li>You can interact with JavaScript objects programmatically (e.g., manipulate properties, call methods).<br>
+<img src="image-59.png" alt="alt text"></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>JavaScript Object</th>
+<th>JSON</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Type</strong></td>
+<td>Native JavaScript object</td>
+<td>A string format used for data representation</td>
+</tr>
+<tr>
+<td><strong>Syntax</strong></td>
+<td>Can have variables, functions, etc.</td>
+<td>Only supports data (strings, numbers, arrays, booleans, objects)</td>
+</tr>
+<tr>
+<td><strong>Usage</strong></td>
+<td>Used within JavaScript programs</td>
+<td>Used for data transfer (e.g., APIs, databases)</td>
+</tr>
+<tr>
+<td><strong>Quotes</strong></td>
+<td>Key names can be unquoted</td>
+<td>Keys must be double-quoted</td>
+</tr>
+<tr>
+<td><strong>Data Types</strong></td>
+<td>Supports complex types like functions, undefined, etc.</td>
+<td>Supports limited types (no functions, undefined, etc.)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-maths"><code>6.</code> <code>MATHS</code> </h3>
+<h3 id="7-objects"><code>7.</code> <code>OBJECTS</code> </h3>
+<p><img src="image-62.png" alt="alt text"><br>
+<img src="image-63.png" alt="alt text"></p>
+<h3 id="week-2"><code>Week 2</code> </h3>
+<h4 id="1-revison"><code>1.</code> <code>Revison</code> </h4>
+<ul>
+<li>
+<p>Normal function : In which we are repeationg ourself for every individual task, for like in this sum of cubes,square.<br>
+<img src="image-83.png" alt="alt text"></p>
+</li>
+<li>
+<p>Using callback : we can generalize the task <code>"Notice the amount of space we cutoff just bcoz of call back"</code><br>
+<img src="image-84.png" alt="alt text"></p>
+</li>
+</ul>
+<h4 id="2--"><code>2.</code> <code> </code> </h4>
+<h3 id="variables"><code>VARIABLES</code> </h3>
+<h5 id="constlet-and-var">Const,let and var </h5>
+<ul>
+<li>Const variable if u used so the value cant change with that function</li>
+<li>In let var we can change the value</li>
+<li>Var majorly not used ,bcoz issue in block scope and functional scope</li>
+</ul>
+<h4 id="blog">BLOG </h4>
+<ul>
+<li>In JavaScript, numbers and strings are primitive data types, not objects. However, they can be treated like objects in certain situations because JavaScript automatically wraps these primitives with object counterparts, called wrapper objects. This process is known as autoboxing.<br>
+<img src="image-03.png" alt="alt text"></li>
+<li>Wrapper objects : JavaScript provides Number and String  constructors, which are object versions of these primitives. When you try to access a method or property on a number or string primitive, JavaScript automatically wraps the primitive in a corresponding object (like Number or String) so that you can use object methods like .toFixed() or .toUpperCase().</li>
+<li>When you use new Number(100) in JavaScript, you're creating a Number object rather than a primitive number. This is generally not recommended because it can lead to unexpected behavior, as objects and primitive values behave differently.<br>
+<img src="image-04.png" alt="alt text"></li>
+<li>Equality checks :  When comparing a primitive number with a Number object, they are not strictly equal (===) because one is a primitive and the other is an object.<br>
+<img src="image-06.png" alt="alt text"></li>
+</ul>
+<h4 id="note--4"><code>NOTE :</code> </h4>
+<h6 id="the-difference-between--loose-equality-and--strict-equality-in-javascript-is-primarily-about-how-they-handle-type-coercion-during-comparison">The difference between == (loose equality) and === (strict equality) in JavaScript is primarily about how they handle type coercion during comparison. </h6>
+<h6 id="use--when-you-want-to-allow-type-conversion-and-are-okay-with-loose-comparisonsuse--when-you-want-to-ensure-both-value-and-type-match-exactly-which-is-generally-recommended-for-clearer-and-more-predictable-comparisons">Use == when you want to allow type conversion and are okay with loose comparisons.Use === when you want to ensure both value and type match exactly, which is generally recommended for clearer and more predictable comparisons. </h6>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th><code>==</code> (Loose Equality)</th>
+<th><code>===</code> (Strict Equality)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type Coercion</td>
+<td>Yes, it performs type conversion before comparison.</td>
+<td>No, it does not perform type conversion; both operands must be of the same type.</td>
+</tr>
+<tr>
+<td>Comparison</td>
+<td>Compares values after converting them to a common type.</td>
+<td>Compares values without any conversion; both must be of the same type and value.</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td><code>0 == '0'</code> is <code>true</code></td>
+<td><code>0 === '0'</code> is <code>false</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>null == undefined</code> is <code>true</code></td>
+<td><code>null === undefined</code> is <code>false</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>1 == true</code> is <code>true</code></td>
+<td><code>1 === true</code> is <code>false</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>[] == 0</code> is <code>true</code></td>
+<td><code>[] === 0</code> is <code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="meomery"><code>Meomery</code> </h3>
+<h5 id="1-stack--used-by-primitive-datatypes-"><code>1. Stack ( used by primitive datatypes )</code> </h5>
+<h5 id="2-heap--used-by-non-primitive-datatypes-"><code>2. Heap ( used by non primitive datatypes )</code> </h5>
+<ul>
+<li>Refers 05_Meomery_system.js to understand with below Scenario</li>
+</ul>
+<h4 id="1-stack-primitive-data-types">1. Stack (Primitive Data Types) </h4>
+<ul>
+<li>Primitive data types in JavaScript include number, string, boolean, undefined, null, symbol, and bigint.</li>
+<li>Call by value: When you assign or pass a primitive value, a copy of the value is created and stored on the stack.</li>
+<li>The stack is a structured memory region that is fast and efficient, used to store static data like function calls, variables, and references.</li>
+<li>If you pass a primitive data type to a function, the function receives a copy of that value, meaning changes to the value inside the function do not affect the original.<br>
+<img src="image-01.png" alt="alt text"></li>
+</ul>
+<h4 id="2-heap-non-primitive-data-types">2. Heap (Non-Primitive Data Types) </h4>
+<ul>
+<li>Non-primitive data types include objects, arrays, functions, etc.</li>
+<li>Call by reference: When you assign or pass a non-primitive data type, what is actually passed is a reference to the location in memory (in the heap) where the data is stored.</li>
+<li>The heap is used for dynamic memory allocation, meaning large, more complex objects are stored here, and the stack holds the reference to the memory address in the heap.</li>
+<li>When you pass an object to a function or assign it to another variable, both variables share the same reference, meaning changes to one will affect the other.<br>
+<img src="image-02.png" alt="alt text"></li>
+</ul>
+<p><img src="image-00.png" alt="alt text"></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
