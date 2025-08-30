@@ -6,9 +6,18 @@ wss.on("connection", function(socket: WebSocket) {
     console.log("user connected");
 
     socket.on("message", (e) => {
-        if (e.toString() === "Hello Server!") {
-            console.log(e.toString());
+        const message = e.toString();
+        console.log("Received message:", message);
+        
+        // Handle different message types
+        if (message === "ping") {
+            console.log("Sending pong back to client");
             socket.send("pong");
+        } else if (message === "Hello Server!") {
+            socket.send("Hello Client! Welcome to the chat!");
+        } else {
+            // Echo the message back with a prefix
+            socket.send(`Server received: ${message}`);
         }
     });
 });
