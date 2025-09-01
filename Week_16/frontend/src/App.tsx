@@ -87,6 +87,7 @@ function App() {
       <div className="chat-messages">
         {messages.map((msg) => (
           <div key={msg.id} className={`message ${msg.sender}`}>
+            <p>{msg.id}{msg.sender}</p>
             <div className="message-content">
               <span className="message-text">{msg.text}</span>
               <span className="message-time">{msg.timestamp}</span>
