@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import './App.css'
 
 interface Message {
@@ -11,8 +11,8 @@ interface Message {
 function App() {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [inputMessage, setInputMessage] = useState<string>('');
   const [isConnected, setIsConnected] = useState<boolean>(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const newSocket = new WebSocket('ws://localhost:8080');
@@ -46,6 +46,13 @@ function App() {
     }
   }, [])
 
+  // Focus input when component mounts and when connected
+  useEffect(() => {
+    if (isConnected && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isConnected])
+
   const addMessage = (text: string, sender: 'user' | 'server') => {
     const newMessage: Message = {
       id: Date.now(),
@@ -53,19 +60,26 @@ function App() {
       sender,
       timestamp: new Date().toLocaleTimeString()
     };
+
     setMessages(prev => [...prev, newMessage]);
   }
 
   const sendMessage = () => {
-    if (inputMessage.trim() && socket && isConnected) {
+    
+    if (socket && isConnected) {
       // Add user message to chat
-      addMessage(inputMessage, 'user');
+      addMessage(inputRef.current?.value || '', 'user');
       
       // Send message to server
-      socket.send(inputMessage);
+      socket.send(inputRef.current?.value || '');
       
       // Clear input
-      setInputMessage('');
+      if (inputRef.current) {
+        inputRef.current.value = '';
+      }
+      
+      // Focus input field after sending message
+      inputRef.current?.focus();
     }
   }
 
@@ -87,7 +101,7 @@ function App() {
       <div className="chat-messages">
         {messages.map((msg) => (
           <div key={msg.id} className={`message ${msg.sender}`}>
-            <p>{msg.id}{msg.sender}</p>
+            {/* <p>{msg.id}{msg.sender}</p> */}
             <div className="message-content">
               <span className="message-text">{msg.text}</span>
               <span className="message-time">{msg.timestamp}</span>
@@ -98,16 +112,15 @@ function App() {
       
       <div className="chat-input">
         <input
+          ref={inputRef}
           type="text"
-          value={inputMessage}
-          onChange={(e) => setInputMessage(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="Type a message..."
           disabled={!isConnected}
         />
         <button 
           onClick={sendMessage} 
-          disabled={!isConnected || !inputMessage.trim()}
+          disabled={!isConnected}
         >
           Send
         </button>
