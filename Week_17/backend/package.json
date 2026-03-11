@@ -3,10 +3,18 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "tsc -b && bun run ./dist/index.js",
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@types/pg": "^8.18.0",
+    "pg": "^8.20.0"
   }
 }
